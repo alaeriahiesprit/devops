@@ -32,7 +32,6 @@ pipeline{
        stage('Deploy') {
             steps {
                 sh "mvn clean install -DskipTests=true"
-"
             }
         }
  }
