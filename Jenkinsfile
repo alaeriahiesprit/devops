@@ -10,12 +10,12 @@ pipeline{
         }
        stage('Compile & test Maven') {
             steps {
-                sh 'mvn clean compile -DskipTests'
+                sh "mvn clean compile -DskipTests"
             }
         }
        stage('JUNIT/Mockito') {
             steps {
-                sh 'mvn test'
+                sh "mvn test"
             }
         }
        stage('Run SonarQube') {
@@ -31,7 +31,7 @@ pipeline{
         }
        stage('Deploy') {
             steps {
-                sh "mvn clean install -DskipTests=true
+                sh "mvn clean install -DskipTests=true"
 "
             }
         }
