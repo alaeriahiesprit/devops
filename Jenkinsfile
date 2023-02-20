@@ -1,6 +1,6 @@
 pipeline{
      environment{
-            registry= "alaeriahiesprit/ExamThourayaS2"
+            registry= "alaeriahiesprit/examthourayas2"
 	        registryCredential = "alaeriahiesprit"
             dockerImage = "achat"
     }
