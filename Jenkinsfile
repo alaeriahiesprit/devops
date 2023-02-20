@@ -1,4 +1,9 @@
 pipeline{
+     environment{
+            registry= "alaeriahiesprit/ExamThourayaS2"
+	        registryCredential = "alaeriahiesprit"
+            dockerImage = "achat"
+    }
  agent any
     stages {
        stage('Git') {
