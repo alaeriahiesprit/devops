@@ -2,7 +2,7 @@ pipeline{
      environment{
             registry= "alaeriahiesprit/examthourayas2"
 	        registryCredential = "alaeriahiesprit"
-            dockerImage = "achat"
+            dockerImage = "examthourayas2"
     }
  agent any
     stages {
@@ -39,6 +39,13 @@ pipeline{
                 sh "mvn clean install -DskipTests=true"
             }
         }
+	stage('BUILD') { 
+            steps {
+                script {
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                       }
+                  }
+            }     
  }
     
 }
